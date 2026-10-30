@@ -24,14 +24,14 @@ window.SITE_CONFIG = {
   // own model):
   //   "A fundamentals-only model (no polls). Each race's predicted Democratic share combines the district's partisan lean, incumbency, and a forecast of the national House vote from presidential approval, gas prices, income and the midterm penalty.",
   //   "Uncertainty combines one national error shared by every race with a separate error for each race. Seat totals come from 10,000 simulated elections.",
-  method: [
-    "Each race's predicted Democratic share combines the district's or state's partisan lean, incumbency, each candidate's share of the two campaigns' combined spending, and a forecast of the national House vote. The incumbency advantage is allowed to be smaller from 2018 on, when it dropped sharply. House and Senate races use separate models, each fit on contested races from 2012 to 2024.",
+   method: [
+    "Each race's predicted Democratic share combines the district's or state's partisan lean, incumbency, challenger spending, and a forecast of the national House vote. The incumbency advantage is allowed to be smaller from 2018 on, when it dropped sharply. Challenger spending counts only the challenger's money against an incumbent, and both candidates' money in open seats, because past research and my own tests found that challenger spending matters far more than incumbent spending. House and Senate races use the same model, fit separately on contested races from 2012 to 2024.",
     "The national environment blends two estimates. The first is a fundamentals model based on presidential approval and the midterm penalty. The second is the House generic-ballot polling average, adjusted for the polls' history of overstating Democrats. The polls get about two-thirds of the weight because they have been more accurate, which puts Democrats at about 53.4% of the national House vote. Senate polls are not used.",
-    "Uncertainty combines one national error shared by every race with a separate error for each race. Seat totals come from 10,000 simulated elections, each using the same national environment for the House and the Senate. The Senate forecast leans heavily on Democratic spending advantages in close races, so it may be too optimistic for Democrats."
+    "Uncertainty combines one national error shared by every race with a separate error for each race. Seat totals come from 10,000 simulated elections, each using the same national environment for the House and the Senate. Before finalizing, I tested each variable on the 2022 and 2024 elections. I replaced my earlier measure, each candidate's share of total spending, because it made close races less accurate and tilted predictions toward Democrats."
   ],
   // Your data files. Leave these alone unless you renamed your files.
-  forecast_file: "forecast.csv",
-  sims_file: "seat_sims.csv",
+  forecast_file: "forecast_cavazos.csv",
+  sims_file: "seat_sims_cavazos.csv",
 
   // Course links. Leave these as they are.
   links: {
